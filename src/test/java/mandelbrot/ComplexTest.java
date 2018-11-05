@@ -145,5 +145,6 @@ public class ComplexTest {
     void testAdd(){
         assertEquals(new Complex(2, 2), two.add(twoI));
         assertEquals(new Complex(-1, -1), minusOne.add(minusI));
+        assertEquals(new Complex(0, 1), minusI.add(twoI));
     }
 }
