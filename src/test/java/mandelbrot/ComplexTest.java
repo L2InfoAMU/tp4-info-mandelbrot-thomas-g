@@ -178,7 +178,11 @@ public class ComplexTest {
 
     @Test
     void testPow(){
-
+        assertEquals(new Complex(1, 0), onePlusI.pow(0));
+        assertEquals(new Complex(1, 1), onePlusI.pow(1));
+        assertEquals(new Complex(16, -16), oneMinusI.pow(9));
     }
+
+
 
 }
