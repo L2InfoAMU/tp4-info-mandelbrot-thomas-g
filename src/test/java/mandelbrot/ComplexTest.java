@@ -147,4 +147,11 @@ public class ComplexTest {
         assertEquals(new Complex(-1, -1), minusOne.add(minusI));
         assertEquals(new Complex(0, 1), minusI.add(twoI));
     }
+
+    @Test
+    void testSubtract() {
+        assertEquals(new Complex(2, -2), two.subtract(twoI));
+        assertEquals(new Complex(0, -2), oneMinusI.subtract(onePlusI));
+        assertEquals(new Complex(0, 0), two.subtract(two));
+    }
 }
