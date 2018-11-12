@@ -183,6 +183,11 @@ public class ComplexTest {
         assertEquals(new Complex(16, -16), oneMinusI.pow(9));
     }
 
-
+    @Test
+    void testScale(){
+        assertEquals(new Complex(0, -1), oneMinusI.scale(0));
+        assertEquals(new Complex(8, 0), two.scale(4));
+        assertEquals(new Complex(0, 2), twoI.scale(4));
+    }
 
 }
