@@ -191,8 +191,9 @@ public class ComplexTest {
     @Test
     void testEquals(){
         assertEquals(true, new Complex(0, 0).equals(Complex.ZERO));
-        assertEquals(false, new Complex(0, 1).equals(Complex.ONE));
+        assertEquals(false, Complex.I.equals(Complex.ONE));
         assertEquals(false, new Complex(0, 0).equals(null));
+        assertEquals(true, two.equals(new Complex(2, 0)));
     }
 
 }

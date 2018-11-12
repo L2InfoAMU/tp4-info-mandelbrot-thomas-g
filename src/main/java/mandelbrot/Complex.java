@@ -152,7 +152,7 @@ public class Complex {
      * @return a complex number <code>c</code> such that <code>this * c = 1</code>
      */
     Complex reciprocal() {
-        if (this == ZERO){
+        if (this.equals(ZERO)){
             throw new ArithmeticException("divide by zero");
         }
         double m = squaredModulus();
@@ -166,7 +166,7 @@ public class Complex {
      * @return the complex number <code>this / divisor</code>
      */
     Complex divide(Complex divisor) {
-        if (divisor == ZERO){
+        if (divisor.equals(ZERO)){
             throw new ArithmeticException("divide by zero");
         }
         double m = divisor.squaredModulus();
@@ -207,12 +207,12 @@ public class Complex {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
+        if (this == o )
             return true;
         if (o == null || getClass() != o.getClass())
             return false;
         Complex complex = (Complex) o;
-        return Helpers.doubleCompare(complex.real, real) == 0 ||
+        return Helpers.doubleCompare(complex.real, real) == 0 &&
                 Helpers.doubleCompare(complex.imaginary, imaginary) == 0;
     }
 
