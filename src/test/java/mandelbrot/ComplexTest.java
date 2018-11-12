@@ -171,9 +171,14 @@ public class ComplexTest {
 
     @Test
     void testModulus(){
-        assertEquals(4, two.modulus());
-        assertEquals(4, twoI.modulus());
-        assertEquals(2, onePlusI.modulus();
+        assertEquals(2, two.modulus());
+        assertEquals(Math.sqrt(8), two.add(twoI).modulus());
+        assertEquals(Math.sqrt(2), onePlusI.modulus());
+    }
+
+    @Test
+    void testPow(){
+
     }
 
 }
